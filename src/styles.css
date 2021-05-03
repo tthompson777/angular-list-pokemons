@@ -1,0 +1,33 @@
+body {
+  position: relative !important;
+  margin: 0 !important;
+  padding-bottom: 6rem !important;
+  min-height: 100% !important;
+}
+
+html {
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.nav-pokemon {
+  background: #ffc107;
+  border-bottom: 2px solid #a9a9a9;
+  text-align: center;
+  padding: 10px;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  background-color: #efefef;
+  text-align: center;
+  background: #ffc107;
+}
+
+footer p {
+  margin-bottom: 0;
+}

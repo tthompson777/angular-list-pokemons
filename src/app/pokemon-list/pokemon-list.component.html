@@ -1,0 +1,70 @@
+<div class="container">
+
+  <div class="row margin-top-10 p-r-1">
+    <div class="col">
+      <div class="form-group">
+        <input (keyup.enter)="listPokemonsByName(searchTerm)" type="text" class="form-control form-control-sm"
+          placeholder="Digite o nome do seu Pokemon e pressione 'Enter'" [(ngModel)]="searchTerm">
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="showAlert">
+    <div class="col">
+      <div class="alert alert-warning" role="alert">
+        <i class="fa fa-info"></i> Digite o nome de algum Pokemón ou use o botão Refazer a Pesquisa.
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm buttons-cards">
+      <button type="button" class="btn btn-sm btn-info" (click)="loadMore()" [disabled]="searchTerm">
+        <i class="fa fa-plus"></i> Carregar Mais
+      </button>
+
+      <button type="button" class="btn btn-sm btn-success" (click)="reloadPage()">
+        <i class="fa fa-refresh"></i> Refazer Pesquisa
+      </button>
+    </div>
+  </div>
+
+
+  <div class="pokemon-grid">
+    <div class="box" *ngFor="let pokemon of pokemons">
+
+      <!-- Imagem do Pokemon -->
+      <img [src]="pokemon.sprites.front_default" alt="Pokemon">
+      <h3>{{ pokemon.name }}</h3>
+
+      <div class="footer-box">
+        <div class="col">
+          <strong>Tipo: </strong> {{ pokemon.types[0].type.name }}
+        </div>
+        <div class="col">
+          <strong>Força: </strong> {{ pokemon.stats[1].base_stat }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="infoError" class="infoErrorDiv">
+    <div class="row areaErro">
+      <div class="col-sm-12">
+
+        <img src="../../assets/img/pokemons_404.png" width="300" alt="">
+
+        <h3>Poxa, parece que esse Pokemóm não existe!</h3>
+        <p>Tente outro nome. Não sabe o nome? Simples,
+          <a href="https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_name" target="_blank">
+            veja uma lista aqui</a>
+        </p>
+
+        <button type="button" class="btn btn-sm btn-success" (click)="reloadPage()">
+          <i class="fa fa-refresh"></i> Refazer Pesquisa
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

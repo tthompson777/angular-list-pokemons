@@ -1,0 +1,82 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.box {
+  background: url('../../assets/img/back_card.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  text-align: center;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: -1px 5px 12px 0px rgba(189,189,189,0.75);
+  -webkit-box-shadow: -1px 5px 12px 0px rgba(189,189,189,0.75);
+  -moz-box-shadow: -1px 5px 12px 0px rgba(189,189,189,0.75);
+  transition: transform 100ms ease-in-out;
+}
+.box:hover {
+  transform: scale(1.05);
+}
+
+h3 {
+  font-family: 'Delius', cursive;
+  font-weight: bolder;
+}
+
+h3 {
+  text-transform: capitalize;
+}
+
+p, a, span {
+  font-family: 'Roboto', sans-serif;
+}
+
+.buttons-cards {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.buttons-cards button{
+  margin-right: 10px;
+}
+
+.margin-top-10{
+  margin-top: 10px;
+}
+
+.p-l-0 {
+  padding-left: 0;
+}
+.p-r-1 {
+  padding-right: 1;
+}
+
+.infoErrorDiv{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: 150px;
+  grid-template-areas:
+    ". a a ."
+    ". a a .";
+    text-align: center;
+}
+
+.areaErro {
+  grid-area: a;
+  align-self: center;
+  justify-self: center;
+}
+
+.form-control:focus {
+  border-color: #ffc107 im !important;
+  box-shadow: 0 0 0 0.2rem #ffc107 !important;
+  border: 0;
+}

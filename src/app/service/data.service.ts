@@ -1,15 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
-import { empty, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class DataService {
-
-
 
   searchTerm: string = ''; // Usado para a busca de Pokemons
 
@@ -32,7 +28,7 @@ export class DataService {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=12`, requestOptions)
   }
 
-  // Obtendo mais dados
+  // Obtendo nome
   getMoreData(name: string){
 
     const requestOptions = {

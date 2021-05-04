@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 
-import { DataService } from './../service/data.service';
+import { DataService } from '../../service/data.service';
 
 @Component({
   selector: 'app-pokemon-list',

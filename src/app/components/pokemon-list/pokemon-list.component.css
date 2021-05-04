@@ -10,7 +10,7 @@
 }
 
 .box {
-  background: url('../../assets/img/back_card.jpg');
+  background: url('../../../assets/img/back_card.jpg');
   background-size: cover;
   background-repeat: repeat;
   text-align: center;
